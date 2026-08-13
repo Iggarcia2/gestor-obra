@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gestor de Obra V0.3</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <h1>Gestor de Obra</h1>
+      <small>V0.3 · prototipo HTML</small>
+    </div>
+    <nav class="nav">
+      <button data-page="dashboard" class="active">▦ Dashboard</button>
+      <button data-page="config">⚙ Configuración</button>
+      <button data-page="tasks">✓ Tareas</button>
+      <button data-page="purchases">⏳ Compras</button>
+      <button data-page="calculators">▤ Rendimientos</button>
+      <button data-page="comments">☰ Comentarios</button>
+      <button data-page="help">? Ayuda / Archivo</button>
+    </nav>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="project-title">
+        <strong id="topProjectName">Vivienda piloto</strong>
+        <span id="saveState">Sin cambios pendientes</span>
+      </div>
+      <div class="top-actions">
+        <button class="btn" id="legendBtn" title="Ver leyenda">? Leyenda</button>
+        <select id="activeUser" class="user-select" title="Usuario que registra comentarios">
+          <option>Juan</option><option>Vos</option>
+        </select>
+        <button class="btn" id="newBtn">Nuevo</button>
+        <button class="btn" id="openBtn">Abrir JSON</button>
+        <button class="btn primary" id="saveBtn">Guardar</button>
+        <button class="btn" id="backupBtn">Guardar copia</button>
+        <input type="file" id="fileFallback" accept=".json,application/json" class="hidden">
+      </div>
+    </header>
+
+    <div class="content">
+      <section id="page-dashboard" class="page active"></section>
+      <section id="page-config" class="page"></section>
+      <section id="page-tasks" class="page"></section>
+      <section id="page-purchases" class="page"></section>
+      <section id="page-calculators" class="page"></section>
+      <section id="page-comments" class="page"></section>
+      <section id="page-help" class="page"></section>
+    </div>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <div class="modal-head"><h3 id="modalTitle">Tarea</h3><button class="btn" id="modalClose">Cerrar</button></div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="data/base.js"></script>
+<script src="data/tasks-1.js"></script>
+<script src="data/tasks-2.js"></script>
+<script src="data/tasks-3.js"></script>
+<script src="data/tasks-4.js"></script>
+<script src="app-1.js"></script>
+<script src="app-2.js"></script>
+<script src="app-3.js"></script>
+<script src="app-4.js"></script>
+<script src="app-5.js"></script>
+</body>
+</html>
